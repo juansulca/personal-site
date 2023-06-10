@@ -4,13 +4,22 @@ const { title, description } = Astro.props;
 
 <div
   id="home"
-  class="w-full flex px-8 h-96 justify-center items-center flex-col gap-8 bg-cover bg-center bg-no-repeat bg-gray-100 rounded-xl text-white"
+  class="w-full flex md:flex-row flex-col px-8 h-screen justify-center items-center gap-8 bg-cover bg-center bg-no-repeat bg-gray-100 rounded-xl text-white"
   style="background-image:linear-gradient(rgba(0, 0, 40, 0.8),rgba(0, 0, 40, 0.8)), url('hero/hero.jpg');"
 >
+  <img src="hero/portrait_v2.png" alt="my pixel portrait" class="pixelated mr-4" >
   <div class="space-y-4 text-center">
-    <h1 class="text-4xl inline-block font-bold">{title}</h1>
-    { description && <p class="text-xl max-w-lg text-blue-100">
+    <h1 class="text-4xl inline-block">I'm <b class="font-bold">{title}</b></h1>
+    { description && <p class="text-xxl max-w-lg text-blue-100">
       {description}
     </p>}
   </div>
 </div>
+
+<style>
+  .pixelated {
+    width: 30rem;
+    height: auto;
+    image-rendering: pixelated;
+  }
+</style>

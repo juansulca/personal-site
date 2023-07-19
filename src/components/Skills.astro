@@ -1,37 +1,69 @@
 ---
+import AWS from "../components/icons/AWS.astro";
 import Rust from "../components/icons/Rust.astro";
 import SkillCard from "../components/SkillCard.astro";
 import SectionTitle from "../components/SectionTitle.astro";
+import TypeScrip from "./icons/TypeScrip.astro";
+import Mongo from "./icons/Mongo.astro";
+import Node from "./icons/Node.astro";
+import Svelte from "./icons/Svelte.astro";
+import React from "./icons/React.astro";
+import Deno from "./icons/Deno.astro";
+import Python from "./icons/Python.astro";
+import Go from "./icons/Go.astro";
+import Cpp from "./icons/Cpp.astro";
+import PlanetScale from "./icons/PlanetScale.astro";
+import Rocket from "./icons/Rocket.astro";
+import Vite from "./icons/Vite.astro";
+import Next from "./icons/Next.astro";
 ---
 <div id="skills" class="h-screen w-full bg-gray-500 m-0 scroll-mt-20">
   <SectionTitle title="skills()"/>
-  <div class="grid md:gap-4 gap-2 md:grid-cols-3 grid-cols-2 md:grid-rows-3 grid-rows-4 md:mx-[10vw] mx-[5vw] text-gray-50">
+  <div class="grid md:gap-4 gap-2 md:grid-cols-3 grid-cols-2 md:grid-rows-4 grid-rows-5 md:mx-[10vw] mx-[5vw] text-gray-50">
     <SkillCard name="Rust">
       <Rust />
     </SkillCard>
     <SkillCard name="TypeScript">
-      <Rust />
+      <TypeScrip />
     </SkillCard>
     <SkillCard name="MongoDB">
-      <Rust />
+      <Mongo />
     </SkillCard>
-    <SkillCard name="JavaScript">
-      <Rust />
+    <SkillCard name="AWS">
+      <AWS />
+    </SkillCard>
+    <SkillCard name="Node">
+      <Node />
     </SkillCard>
     <SkillCard name="Svelte">
-      <Rust />
+      <Svelte />
     </SkillCard>
     <SkillCard name="React">
-      <Rust />
+      <React />
     </SkillCard>
     <SkillCard name="Deno">
-      <Rust />
+      <Deno />
     </SkillCard>
     <SkillCard name="Python">
-      <Rust />
+      <Python />
     </SkillCard>
     <SkillCard name="Go">
-      <Rust />
+      <Go />
+    </SkillCard>
+    <SkillCard name="C/C++">
+      <Cpp />
+    </SkillCard>
+    <SkillCard name="SQL">
+      <PlanetScale />
+    </SkillCard>
+    <SkillCard name="Astro">
+      <Rocket />
+    </SkillCard>
+    <SkillCard name="Vite">
+      <Vite />
+    </SkillCard>
+    <SkillCard name="Next">
+      <Next />
     </SkillCard>
   </div>
 </div>

@@ -1,6 +1,36 @@
 ---
 const { title, description } = Astro.props;
 ---
+<script>
+let count = 0;
+let timer;
+const secretDiv = document.getElementById('magicDiv');
+const heart = document.getElementById('heart');
+secretDiv?.addEventListener('click', () => {
+  count += 1;
+
+  if(count === 3) {
+    count = 0;
+    heart?.removeAttribute('hidden');
+    setTimeout(() => {heart?.setAttribute('hidden', '')}, 3000)
+    clearTimeout(timer);
+    console.log(`
+  _   _      _ _         _____ _                   _ 
+ | | | | ___| | | ___   |_   _| |__   ___ _ __ ___| |
+ | |_| |/ _ \\ | |/ _ \\    | | | '_ \\ / _ \\ '__/ _ \\ |
+ |  _  |  __/ | | (_) |   | | | | | |  __/ | |  __/_|
+ |_| |_|\\___|_|_|\\___/    |_| |_| |_|\\___|_|  \\___(_)
+                                                     
+    `);
+    return;
+  }
+    
+  clearTimeout(timer);
+  timer = setTimeout(() => {
+    count = 0;
+  }, 5000);
+});
+</script>
 
 <div
   id="home"
@@ -14,6 +44,8 @@ const { title, description } = Astro.props;
       Technologist & Software Developer
     </p>
   </div>
+  <div id="magicDiv" class="w-40 h-40 absolute right-0 -bottom-24"></div>
+  <div id="heart" class="absolute top-1/2 left-1/2 text-8xl" hidden>🔥</div>
 </div>
 
 <style>

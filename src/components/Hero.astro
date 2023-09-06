@@ -3,7 +3,7 @@ const { title, description } = Astro.props;
 ---
 <script>
 let count = 0;
-let timer;
+let timer: number | undefined;
 const secretDiv = document.getElementById('magicDiv');
 const heart = document.getElementById('heart');
 secretDiv?.addEventListener('click', () => {

@@ -1,57 +1,66 @@
 ---
 const { title, description } = Astro.props;
 ---
-<script>
-let count = 0;
-let timer: number | undefined;
-const secretDiv = document.getElementById('magicDiv');
-const heart = document.getElementById('heart');
-secretDiv?.addEventListener('click', () => {
-  count += 1;
 
-  if(count === 3) {
-    count = 0;
-    heart?.removeAttribute('hidden');
-    setTimeout(() => {heart?.setAttribute('hidden', '')}, 3000)
-    clearTimeout(timer);
-    console.log(`
-  _   _      _ _         _____ _                   _ 
+<script>
+    let count = 0;
+    let timer: number | undefined;
+    const secretDiv = document.getElementById("magicDiv");
+    const heart = document.getElementById("heart");
+    secretDiv?.addEventListener("click", () => {
+        count += 1;
+
+        if (count === 3) {
+            count = 0;
+            heart?.removeAttribute("hidden");
+            setTimeout(() => {
+                heart?.setAttribute("hidden", "");
+            }, 3000);
+            clearTimeout(timer);
+            console.log(`
+  _   _      _ _         _____ _                   _
  | | | | ___| | | ___   |_   _| |__   ___ _ __ ___| |
  | |_| |/ _ \\ | |/ _ \\    | | | '_ \\ / _ \\ '__/ _ \\ |
  |  _  |  __/ | | (_) |   | | | | | |  __/ | |  __/_|
  |_| |_|\\___|_|_|\\___/    |_| |_| |_|\\___|_|  \\___(_)
-                                                     
+
     `);
-    return;
-  }
-    
-  clearTimeout(timer);
-  timer = setTimeout(() => {
-    count = 0;
-  }, 5000);
-});
+            return;
+        }
+
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+            count = 0;
+        }, 5000);
+    });
 </script>
 
 <div
-  id="home"
-  class="w-full flex md:flex-row flex-col px-8 h-screen justify-center items-center gap-16 bg-cover bg-center bg-no-repeat bg-gray-100 rounded-xl text-white scroll-mt-20"
-  style="background-image:linear-gradient(rgba(0, 0, 40, 0.8),rgba(0, 0, 40, 0.8)), url('hero/hero.jpg');"
+    id="home"
+    class="w-full flex md:flex-row flex-col px-8 h-screen justify-center items-center gap-16 bg-cover bg-center bg-no-repeat bg-gray-100 rounded-xl text-white scroll-mt-20"
+    style="background-image:linear-gradient(rgba(0, 0, 40, 0.8),rgba(0, 0, 40, 0.8)), url('hero/hero.jpg');"
 >
-  <img src="hero/portrait_v2.png" alt="my pixel portrait" class="pixelated mr-4 w-[55rem]">
-  <div class="space-y-4 text-center">
-    <h1 class="md:text-8xl text-4xl inline-block">I'm <b class="font-bold">Juan Sulca</b></h1>
-    <p class="md:text-4xl text-xl text-blue-100">
-      Technologist & Software Developer
-    </p>
-  </div>
-  <div id="magicDiv" class="w-40 h-40 absolute right-0 -bottom-24"></div>
-  <div id="heart" class="absolute top-1/2 left-1/2 text-8xl" hidden>🔥</div>
+    <img
+        src="hero/portrait_v2.png"
+        alt="my pixel portrait"
+        class="pixelated mr-4 w-[55rem]"
+    />
+    <div class="space-y-4 text-center">
+        <h1 class="md:text-8xl text-4xl inline-block">
+            I'm <b class="font-bold">Juan Sulca</b>
+        </h1>
+        <p class="md:text-4xl text-xl text-blue-100">
+            Maker & Software engineer
+        </p>
+    </div>
+    <div id="magicDiv" class="w-40 h-40 absolute right-0 -bottom-24"></div>
+    <div id="heart" class="absolute top-1/2 left-1/2 text-8xl" hidden>🔥</div>
 </div>
 
 <style>
-  .pixelated {
-    width: 30rem;
-    height: auto;
-    image-rendering: pixelated;
-  }
+    .pixelated {
+        width: 30rem;
+        height: auto;
+        image-rendering: pixelated;
+    }
 </style>

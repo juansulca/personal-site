@@ -1,133 +1,155 @@
 ---
+import { Image } from "astro:assets";
 import SectionTitle from "./SectionTitle.astro";
+import colorfulDelivery from "../assets/projects/ColorfullDelivery.png";
+import ctrlSpace from "../assets/projects/ctrl_space.jpg";
+import theGrid from "../assets/projects/the_grid.jpeg";
+import tinkerpod from "../assets/projects/tinkerpod.jpg";
+import lora from "../assets/projects/lora.jpeg";
 ---
 
 <div id="projects" class="min-h-screen w-full m-0 p-4 scroll-mt-20">
-    <SectionTitle title="projects()" />
-    <div
-        class="md:w-3/4 md:min-h-[33vh] overflow-hidden p-8 mx-auto mb-8 flex justify-center md:flex-row flex-col-reverse gap-8 border-gray-400 border-2 rounded-md sticky md:top-24 bg-gray-200 z-0"
-    >
-        <div class="md:w-1/2 flex flex-col px-4 overflow-hidden">
-            <h3 class="md:text-2xl text-xl max-w-lg font-bold py-4">
-                CTRL Space
-            </h3>
-            <p>
-                In the digital era, where surveillance is omnipresent yet often
-                invisible, our art installation, “Ctrl_Space,” brings Michel
-                Foucault’s theory of the Panopticon into a contemporary context.
-                This interactive installation features three large, mechanical
-                eyes, each meticulously crafted to follow the movement of
-                visitors, simulating the unnerving sensation of being constantly
-                watched.This project utilizes Python, OpenCV, and Arduino to
-                enable real-time person detection and servo motor control.
-            </p>
-            <div class="mt-8 underline">
-                <a href="https://vimeo.com/887818718">Video</a>
-            </div>
-        </div>
-        <div class="md:h-auto h-64 overflow-hidden md:w-1/2">
-            <img
-                src="projects/Ctrl_Space.jpg"
-                alt="CTRL space installation"
-                class="w-full h-full object-cover"
-            />
-        </div>
+  <SectionTitle title="projects()" />
+  <div
+    class="md:w-3/4 md:min-h-[33vh] overflow-hidden p-8 mx-auto mb-8 flex justify-center md:flex-row flex-col-reverse gap-8 border-gray-400 border-2 rounded-md sticky md:top-24 bg-gray-200 z-0"
+  >
+    <div class="md:w-1/2 flex flex-col px-4 overflow-hidden">
+      <h3 class="md:text-2xl text-xl max-w-lg font-bold py-4">TinkerPod</h3>
+      <p>
+        The TinkerPod is an Open-Source hardware platform designed to appeal to
+        makers, creative coders, and designers by providing a hackable and
+        customizable hardware. Inspired by the evolution of multitools and
+        influenced by contemporary devices like the Flipper Zero and SQRT, this
+        project explores the application of critical making, and personal
+        fabrication to Open-Source hardware. The TinkerPod is an ideal hardware
+        platform for designers and makers to explore, learn, modify and extend;
+        make it your own!
+      </p>
+      <div class="mt-8 underline">
+        <a href="https://github.com/juansulca/tinker-pod">Project Github</a>
+      </div>
+      <div class="mt-2 underline">
+        <a href="/projects/tinker-pod">Project Page</a>
+      </div>
     </div>
-    <div
-        class="md:w-3/4 md:min-h-[33vh] p-8 mx-auto mb-8 flex justify-center md:flex-row flex-col-reverse gap-8 border-gray-400 border-2 rounded-md sticky md:top-24 bg-gray-200 z-0"
-    >
-        <div class="md:w-1/2 flex flex-col px-4">
-            <h3 class="md:text-2xl text-xl max-w-lg font-bold py-4">
-                The Grid
-            </h3>
-            <p>
-                A p5js -based audio-visual installation developed during
-                Creation and Computation at OCAD University. When the QR code is
-                scanned, each phone is randomly assigned a note from the E Minor
-                pentatonic scale, an octave value (low, middle, high) and a
-                loop-length (4, 6, 8 & 16 seconds, all clean divisions of 120
-                BPM). While playing their respective audio loop, each phone’s
-                microphone input is analyzed and when the signal amplitude rises
-                above a certain threshold, the screen lights up and random lines
-                are drawn, emulating the physical installation structure as well
-                as the modern media networks we inhabit and interact with.
-                Developed in colaboration with Zubin Isaac, Rutooja K. & Nikhil
-                Thomas.
-            </p>
-            <div class="mt-8 underline">
-                <a href="https://vimeo.com/881911517">Video</a>
-            </div>
-        </div>
-        <div class="h-full md:w-1/2">
-            <img
-                src="projects/the_grid.jpeg"
-                alt="Phones on the grid"
-                class="md:h-full mx-auto"
-            />
-        </div>
+    <div class="md:h-auto h-64 overflow-hidden md:w-1/2">
+      <Image
+        src={tinkerpod}
+        alt="CTRL space installation"
+        class="w-full h-full object-cover"
+      />
     </div>
-    <div
-        class="md:w-3/4 md:min-h-[33vh] p-8 mx-auto mb-8 flex justify-center md:flex-row flex-col-reverse gap-8 border-gray-400 border-2 rounded-md sticky md:top-24 bg-gray-200 z-0"
-    >
-        <div class="md:w-1/2 flex flex-col px-4">
-            <h3 class="md:text-2xl text-xl max-w-lg font-bold py-4">
-                Colorful Delivery
-            </h3>
-            <p>
-                This project utilizes a given hash value to create a captivating
-                color matrix. By converting the hash into a collection of hex
-                colors, it dynamically generates a matrix that reflects the
-                unique data points. With potential applications in data
-                visualization, such as blockchain analysis, this creative tool
-                showcases the power of code and its ability to turn data into
-                visual art.
-            </p>
-            <div class="mt-8 underline">
-                <a href="https://editor.p5js.org/JuanSulca/full/nRLZ_BeiR"
-                    >Live preview</a
-                >
-            </div>
-        </div>
-        <div class="h-full md:w-1/2">
-            <img
-                src="projects/ColorfullDelivery.png"
-                alt="Colorful delivery color matrix"
-                class="md:h-full mx-auto"
-            />
-        </div>
+  </div>
+  <div
+    class="md:w-3/4 md:min-h-[33vh] overflow-hidden p-8 mx-auto mb-8 flex justify-center md:flex-row flex-col-reverse gap-8 border-gray-400 border-2 rounded-md sticky md:top-24 bg-gray-200 z-0"
+  >
+    <div class="md:w-1/2 flex flex-col px-4 overflow-hidden">
+      <h3 class="md:text-2xl text-xl max-w-lg font-bold py-4">CTRL Space</h3>
+      <p>
+        In the digital era, where surveillance is omnipresent yet often
+        invisible, our art installation, “Ctrl_Space,” brings Michel Foucault's
+        theory of the Panopticon into a contemporary context. This interactive
+        installation features three large, mechanical eyes, each meticulously
+        crafted to follow the movement of visitors, simulating the unnerving
+        sensation of being constantly watched.This project utilizes Python,
+        OpenCV, and Arduino to enable real-time person detection and servo motor
+        control.
+      </p>
+      <div class="mt-8 underline">
+        <a href="https://vimeo.com/887818718">Project Github</a>
+      </div>
     </div>
-    <div
-        class="md:w-3/4 md:min-h-[33vh] p-8 mx-auto mb-8 flex justify-center md:flex-row flex-col-reverse gap-8 border-2 border-gray-400 rounded-md sticky md:top-24 bg-gray-200 z-0"
-    >
-        <div class="md:w-1/2 flex flex-col px-4">
-            <h3 class="md:text-2xl text-xl max-w-lg font-bold py-4">
-                Arduino LMiC adaptation to LoRaWAN v1.1
-            </h3>
-            <p>
-                This project focused on adapting the Arduino LMiC library to
-                comply with the LoRaWAN v1.1 specification for A and C devices,
-                incorporating enhanced security features and ensuring
-                compatibility with the latest standards. The modified library
-                offered developers the ability to create robust and secure
-                LoRaWAN applications while facilitating seamless integration
-                with LoRaWAN v1.1 networks. The project prioritized delivering
-                LoRaWAN v1.1 features while minimizing the impact on the
-                library's performance. The aim was to provide the researcher and
-                developer community with a highly functional and dev-friendly
-                LoRaWAN v1.1 implementation.
-            </p>
-            <div class="mt-8 underline">
-                <a href="https://github.com/juansulca/arduino-lmic"
-                    >Project Github</a
-                >
-            </div>
-        </div>
-        <div class="h-full md:w-1/2">
-            <img
-                src="projects/ColorfullDelivery.png"
-                alt="Colorful delivery color matrix"
-                class="md:h-full mx-auto"
-            />
-        </div>
+    <div class="md:h-auto h-64 overflow-hidden md:w-1/2">
+      <Image
+        src={ctrlSpace}
+        alt="CTRL space installation"
+        class="w-full h-full object-cover"
+      />
     </div>
+  </div>
+  <div
+    class="md:w-3/4 md:min-h-[33vh] p-8 mx-auto mb-8 flex justify-center md:flex-row flex-col-reverse gap-8 border-gray-400 border-2 rounded-md sticky md:top-24 bg-gray-200 z-0"
+  >
+    <div class="md:w-1/2 flex flex-col px-4">
+      <h3 class="md:text-2xl text-xl max-w-lg font-bold py-4">The Grid</h3>
+      <p>
+        A p5js -based audio-visual installation developed during Creation and
+        Computation at OCAD University. When the QR code is scanned, each phone
+        is randomly assigned a note from the E Minor pentatonic scale, an octave
+        value (low, middle, high) and a loop-length (4, 6, 8 & 16 seconds, all
+        clean divisions of 120 BPM). While playing their respective audio loop,
+        each phone's microphone input is analyzed and when the signal amplitude
+        rises above a certain threshold, the screen lights up and random lines
+        are drawn, emulating the physical installation structure as well as the
+        modern media networks we inhabit and interact with. Developed in
+        colaboration with Zubin Isaac, Rutooja K. & Nikhil Thomas.
+      </p>
+      <div class="mt-8 underline">
+        <a href="https://vimeo.com/881911517">Video</a>
+      </div>
+    </div>
+    <div class="h-full md:w-1/2">
+      <Image src={theGrid} alt="Phones on the grid" class="md:h-full mx-auto" />
+    </div>
+  </div>
+  <div
+    class="md:w-3/4 md:min-h-[33vh] p-8 mx-auto mb-8 flex justify-center md:flex-row flex-col-reverse gap-8 border-gray-400 border-2 rounded-md sticky md:top-24 bg-gray-200 z-0"
+  >
+    <div class="md:w-1/2 flex flex-col px-4">
+      <h3 class="md:text-2xl text-xl max-w-lg font-bold py-4">
+        Colorful Delivery
+      </h3>
+      <p>
+        This project utilizes a given hash value to create a captivating color
+        matrix. By converting the hash into a collection of hex colors, it
+        dynamically generates a matrix that reflects the unique data points.
+        With potential applications in data visualization, such as blockchain
+        analysis, this creative tool showcases the power of code and its ability
+        to turn data into visual art.
+      </p>
+      <div class="mt-8 underline">
+        <a href="https://editor.p5js.org/JuanSulca/full/nRLZ_BeiR"
+          >Live preview</a
+        >
+      </div>
+    </div>
+    <div class="h-full md:w-1/2">
+      <Image
+        src={colorfulDelivery}
+        alt="Colorful delivery color matrix"
+        class="md:h-full mx-auto"
+      />
+    </div>
+  </div>
+  <div
+    class="md:w-3/4 md:min-h-[33vh] p-8 mx-auto mb-8 flex justify-center md:flex-row flex-col-reverse gap-8 border-2 border-gray-400 rounded-md sticky md:top-24 bg-gray-200 z-0"
+  >
+    <div class="md:w-1/2 flex flex-col px-4">
+      <h3 class="md:text-2xl text-xl max-w-lg font-bold py-4">
+        Arduino LMiC adaptation to LoRaWAN v1.1
+      </h3>
+      <p>
+        This project focused on adapting the Arduino LMiC library to comply with
+        the LoRaWAN v1.1 specification for A and C devices, incorporating
+        enhanced security features and ensuring compatibility with the latest
+        standards. The modified library offered developers the ability to create
+        robust and secure LoRaWAN applications while facilitating seamless
+        integration with LoRaWAN v1.1 networks. The project prioritized
+        delivering LoRaWAN v1.1 features while minimizing the impact on the
+        library's performance. The aim was to provide the researcher and
+        developer community with a highly functional and dev-friendly LoRaWAN
+        v1.1 implementation.
+      </p>
+      <div class="mt-8 underline">
+        <a href="https://github.com/juansulca/arduino-lmic">Project Github</a>
+      </div>
+    </div>
+    <div class="h-full md:w-1/2">
+      <Image
+        src={lora}
+        alt="Colorful delivery color matrix"
+        class="md:h-full mx-auto"
+      />
+    </div>
+  </div>
 </div>

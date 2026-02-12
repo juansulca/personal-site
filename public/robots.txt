@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://juansulca.me/sitemap-index.xml

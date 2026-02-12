@@ -14,7 +14,7 @@ abstract: "The TinkerPod is an Open-Source hardware platform designed to appeal 
 
 This document describes the Tinker Pod project its features and specifications.
 
-For complete information about this project visit <a href="https://github.com/juansulca/tinker-pod">https://github.com/juansulca/tinker-pod</a>.
+For complete information about this project visit https://github.com/juansulca/tinker-pod
 
 ## Copyright Notice
 
@@ -23,7 +23,7 @@ Copyright (c) 2024 Juan Sulca. All rights reserved.
 TinkerPod (c) 2024 by Juan Sulca is licensed under CC BY-SA 4.0. To view a copy of this
 license, visit https://creativecommons.org/licenses/by-sa/4.0/
 
-For more information on licensing visit <a href="https://github.com/juansulca/tinker-pod">https://github.com/juansulca/tinker-pod</a>
+For more information on licensing visit https://github.com/juansulca/tinker-pod
 
 ## Introduction
 
@@ -39,4 +39,4 @@ friendly hardware for creative and technical exploration.
 ## Research project
 
 This project was part of a Master of Design research project at OCAD University. You can read the complete document here
-<a href="https://openresearch.ocadu.ca/id/eprint/4728/1/TinkerPod_JuanSulca.pdf">https://openresearch.ocadu.ca/id/eprint/4728/1/TinkerPod_JuanSulca.pdf</a>
+https://openresearch.ocadu.ca/id/eprint/4728/1/TinkerPod_JuanSulca.pdf

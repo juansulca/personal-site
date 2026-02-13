@@ -1,0 +1,21 @@
+---
+export interface Props {
+  title: string;
+  link: string;
+  date: string;
+}
+
+const { title, link, date } = Astro.props;
+---
+
+<hr />
+<article class="mt-4 mb-8">
+  <span class="flex flex-row justify-between items-center mb-2">
+    <h2 class="text-lg font-semibold">{title}</h2>
+    <a href={link} class="text-blue-500 hover:underline">{link}</a>
+  </span>
+  <p><slot /></p>
+  <div class="flex flex-row items-end">
+    <span class="ml-auto text-gray-500 text-sm">{date}</span>
+  </div>
+</article>

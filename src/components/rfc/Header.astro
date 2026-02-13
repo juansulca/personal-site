@@ -1,0 +1,33 @@
+---
+export interface Props {
+  projectName: string;
+  date: string;
+  title: string;
+}
+
+const { projectName, title, date } = Astro.props;
+---
+
+<span class="my-4 w-full flex flex-row justify-between text-gray-400">
+  <pre>{projectName}</pre>
+  <pre>{title}</pre>
+  <pre>{date}</pre>
+</span>
+<!-- <header
+  class="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-8 pb-6 border-b border-gray-300"
+>
+  <div class="space-y-1">
+    <p class="text-gray-600">Project</p>
+    <p>Codename: {projectName}</p>
+  </div>
+  <div class="text-right space-y-1">
+    {
+      authors.map((author) => (
+        <div>
+          <p class="font-medium">{author}</p>
+        </div>
+      ))
+    }
+    <p class="text-gray-600">{date}</p>
+  </div>
+</header> -->

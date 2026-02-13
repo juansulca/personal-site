@@ -1,0 +1,31 @@
+---
+import ProjectCard from "../../components/rfc/ProjectCard.astro";
+import Layout from "../../layouts/Projects.astro";
+---
+
+<Layout title="Projects" description="Projects">
+  <a
+    class="hover:underline px-4 py-2 border border-gray-200 bg-gray-100 rounded-md"
+    href="/">go back</a
+  >
+  <h1 class="text-3xl font-bold my-8 text-center">Projects</h1>
+
+  <ProjectCard
+    title="Logic Fed Scene Randomizer"
+    link="/projects/lfsr"
+    date="November 2025"
+  >
+    Logic Fed Scene Randomizer is a PCB art piece that illustrates how an LFSR
+    works. A Linear Feedback Shift Register is a circuit capable of generating a
+    sequence of random numbers from a starting non-zero value.
+  </ProjectCard>
+  <ProjectCard
+    title="TinkerPod"
+    link="/projects/tinker-pod"
+    date="February 2025"
+  >
+    The TinkerPod is an Open-Source hardware platform designed to appeal to
+    makers, creative coders, and designers by providing a hackable and
+    customizable hardware.
+  </ProjectCard>
+</Layout>

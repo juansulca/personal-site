@@ -6,8 +6,13 @@ authors:
   - "J. Sulca"
 date: "February 2024"
 abstract: "The TinkerPod is an Open-Source hardware platform designed to appeal to makers, creative coders, and designers by providing a hackable and customizable hardware."
+canonical: "https://github.com/juansulca/tinker-pod"
 ---
+import Page from "../../components/rfc/Page.astro";
+import { Image } from "astro:assets";
+import tinkerpod from "../../assets/projects/tinkerpod.jpg";
 
+<Page {...frontmatter} pageNumber={1} omitHeader={true}>
 # TinkerPod
 
 ## Status of This Document
@@ -25,6 +30,11 @@ license, visit https://creativecommons.org/licenses/by-sa/4.0/
 
 For more information on licensing visit https://github.com/juansulca/tinker-pod
 
+<div class="h-auto w-full"></div>
+
+</Page>
+
+<Page {...frontmatter} pageNumber={2}>
 ## Introduction
 
 TinkerPod is an open-source platform designed for makers, creative coders, and designers,
@@ -34,9 +44,11 @@ explores the application of critical making and personal fabrication to open-sou
 TinkerPod aims to bridge the gap between specialized engineering tools and accessible, user-
 friendly hardware for creative and technical exploration.
 
-![TinkerPod](../../assets/projects/tinkerpod.jpg "TinkerPod running generative art")
+<Image src={tinkerpod} alt="TinkerPod running generative art" class="w-2/3 mx-auto"/>
 
 ## Research project
 
 This project was part of a Master of Design research project at OCAD University. You can read the complete document here
 https://openresearch.ocadu.ca/id/eprint/4728/1/TinkerPod_JuanSulca.pdf
+
+</Page>

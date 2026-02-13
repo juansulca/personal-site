@@ -1,0 +1,17 @@
+---
+export interface Props {
+  authors: string[];
+  pageNumber: number;
+}
+
+const { authors, pageNumber } = Astro.props;
+const lastAuthor =
+  authors.length === 1
+    ? authors[0].split(" ").pop()
+    : authors[0].split(" ").pop() + ", et al.";
+---
+
+<span class="my-4 w-full flex flex-row justify-between text-gray-400">
+  <pre>{lastAuthor}</pre>
+  <pre>[Page {pageNumber}]</pre>
+</span>

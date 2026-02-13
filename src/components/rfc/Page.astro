@@ -1,0 +1,50 @@
+---
+import Header from "./Header.astro";
+import Footer from "./Footer.astro";
+
+export interface Props {
+  title: string;
+  projectName: string;
+  authors: string[];
+  date: string;
+  pageNumber: number;
+  omitHeader?: boolean;
+}
+
+const {
+  title,
+  projectName,
+  authors,
+  date,
+  pageNumber,
+  omitHeader = false,
+} = Astro.props;
+---
+
+<section class="page">
+  <span id={`page-${pageNumber}`}></span>
+  {
+    !omitHeader && (
+      <>
+        <hr class="print:hidden" />
+        <Header title={title} projectName={projectName} date={date} />
+      </>
+    )
+  }
+  <slot />
+  <div class="flex-1"></div>
+  <Footer authors={authors} pageNumber={pageNumber} />
+</section>
+
+<style>
+  @reference "tailwindcss";
+  .page {
+    @apply w-full my-4 min-h-[600px] flex flex-col;
+  }
+
+  @media print {
+    .page {
+      page-break-after: always;
+    }
+  }
+</style>

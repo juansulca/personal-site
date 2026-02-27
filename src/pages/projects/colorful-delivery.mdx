@@ -1,0 +1,32 @@
+---
+layout: ../../layouts/RFCLayout.astro
+title: "Colorful Delivery"
+projectName: "colorful-delivery-001"
+authors:
+  - "J. Sulca"
+date: "2022"
+abstract: "A creative tool that utilizes a given hash value to create a captivating color matrix, with potential applications in data visualization such as blockchain analysis."
+canonical: "https://editor.p5js.org/JuanSulca/full/nRLZ_BeiR"
+---
+import Page from "../../components/rfc/Page.astro";
+import { Image } from "astro:assets";
+import colorfulDelivery from "../../assets/projects/ColorfullDelivery.png";
+
+<Page {...frontmatter} pageNumber={1} omitHeader={true}>
+# Colorful Delivery
+
+## Status of This Document
+
+This document describes the Colorful Delivery project.
+
+## Introduction
+
+This project utilizes a given hash value to create a captivating color matrix. By converting the hash into a collection of hex colors, it dynamically generates a matrix that reflects the unique data points. With potential applications in data visualization, such as blockchain analysis, this creative tool showcases the power of code and its ability to turn data into visual art.
+
+<Image src={colorfulDelivery} alt="Colorful delivery color matrix" class="w-4/5 md:w-3/4 mx-auto my-1"/>
+
+## Links
+
+- [Live preview](https://editor.p5js.org/JuanSulca/full/nRLZ_BeiR)
+
+</Page>

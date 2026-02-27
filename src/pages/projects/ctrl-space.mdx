@@ -1,0 +1,34 @@
+---
+layout: ../../layouts/RFCLayout.astro
+title: "CTRL Space"
+projectName: "ctrl-space-001"
+authors:
+  - "J. Sulca"
+date: "November 2024"
+abstract: "An interactive art installation featuring three large mechanical eyes that follow visitors, bringing Michel Foucault's theory of the Panopticon into a contemporary context."
+canonical: "https://vimeo.com/887818718"
+---
+import Page from "../../components/rfc/Page.astro";
+import { Image } from "astro:assets";
+import ctrlSpace from "../../assets/projects/ctrl_space.jpg";
+
+<Page {...frontmatter} pageNumber={1} omitHeader={true}>
+# CTRL Space
+
+## Status of This Document
+
+This document describes the CTRL Space art installation project.
+
+## Introduction
+
+In the digital era, where surveillance is omnipresent yet often invisible, our art installation, "Ctrl_Space," brings Michel Foucault's theory of the Panopticon into a contemporary context. This interactive installation features three large, mechanical eyes, each meticulously crafted to follow the movement of visitors, simulating the unnerving sensation of being constantly watched.
+
+This project utilizes Python, OpenCV, and Arduino to enable real-time person detection and servo motor control.
+
+<Image src={ctrlSpace} alt="CTRL space installation" class="w-4/5 md:w-3/4 mx-auto my-1"/>
+
+## Links
+
+- [Video](https://vimeo.com/887818718)
+
+</Page>

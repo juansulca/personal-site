@@ -1,0 +1,42 @@
+---
+layout: ../../layouts/RFCLayout.astro
+title: "The Grid"
+projectName: "the-grid-001"
+authors:
+  - "J. Sulca"
+  - "Zubin Isaac"
+  - "Rutooja K."
+  - "Nikhil Thomas"
+date: "October 2023"
+abstract: "A p5js-based audio-visual installation where phones become instruments in an E Minor pentatonic scale, with microphone input triggering visual feedback."
+canonical: "https://vimeo.com/881911517"
+---
+import Page from "../../components/rfc/Page.astro";
+import { Image } from "astro:assets";
+import theGrid from "../../assets/projects/the_grid.jpeg";
+
+<Page {...frontmatter} pageNumber={1} omitHeader={true}>
+# The Grid
+
+## Introduction
+
+A p5js-based audio-visual installation developed during Creation and Computation at OCAD University.
+When the QR code is scanned, each phone is randomly assigned a note from the E Minor pentatonic scale,
+an octave value (low, middle, high) and a loop-length (4, 6, 8 & 16 seconds, all clean divisions of 120 BPM).
+
+While playing their respective audio loop, each phone's microphone input is analyzed and when the signal amplitude rises above a certain threshold, the screen lights up and random lines are drawn, emulating the physical installation structure as well as the modern media networks we inhabit and interact with.
+
+</Page>
+<Page {...frontmatter} pageNumber={2}>
+
+<Image src={theGrid} alt="The Grid installation" class="w-4/5 md:w-3/4 mx-auto my-1"/>
+
+## Credits
+
+Developed in collaboration with Zubin Isaac, Rutooja K. & Nikhil Thomas.
+
+## Links
+
+- [Video](https://vimeo.com/881911517)
+
+</Page>

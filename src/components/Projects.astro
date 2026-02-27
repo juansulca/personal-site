@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import SectionTitle from "./SectionTitle.astro";
 import colorfulDelivery from "../assets/projects/ColorfullDelivery.png";
 import ctrlSpace from "../assets/projects/ctrl_space.jpg";
@@ -14,7 +13,11 @@ import Project from "./home/project.astro";
     class="max-w-7xl w-full mx-auto flex flex-row items-center justify-between"
   >
     <SectionTitle title="projects()" />
-    <a href="/projects" class="text-blue-500 hover:underline">All Projects</a>
+    <a
+      href="/projects"
+      class="hover:underline px-4 py-3 border border-gray-400 bg-gray-200 rounded-md"
+      >All Projects</a
+    >
   </div>
   <Project image={tinkerpod} imageAlt="TinkerPod with generative art">
     <h3 class="md:text-2xl text-xl max-w-lg font-bold py-4">TinkerPod</h3>
@@ -47,7 +50,10 @@ import Project from "./home/project.astro";
       enable real-time person detection and servo motor control.
     </p>
     <div class="mt-8 underline">
-      <a href="https://vimeo.com/887818718">Project Github</a>
+      <a href="https://vimeo.com/887818718">Video</a>
+    </div>
+    <div class="mt-2 underline">
+      <a href="/projects/ctrl-space">Project Page</a>
     </div>
   </Project>
   <Project image={theGrid} imageAlt="The Grid installation">
@@ -67,6 +73,9 @@ import Project from "./home/project.astro";
     <div class="mt-8 underline">
       <a href="https://vimeo.com/881911517">Video</a>
     </div>
+    <div class="mt-2 underline">
+      <a href="/projects/the-grid">Project Page</a>
+    </div>
   </Project>
   <Project image={colorfulDelivery} imageAlt="Colorful delivery color matrix">
     <h3 class="md:text-2xl text-xl max-w-lg font-bold py-4">
@@ -83,6 +92,9 @@ import Project from "./home/project.astro";
     <div class="mt-8 underline">
       <a href="https://editor.p5js.org/JuanSulca/full/nRLZ_BeiR">Live preview</a
       >
+    </div>
+    <div class="mt-2 underline">
+      <a href="/projects/colorful-delivery">Project Page</a>
     </div>
   </Project>
   <Project image={lora} imageAlt="Arduino LMiC adaptation to LoRaWAN v1.1">
@@ -102,6 +114,9 @@ import Project from "./home/project.astro";
     </p>
     <div class="mt-8 underline">
       <a href="https://github.com/juansulca/arduino-lmic">Project Github</a>
+    </div>
+    <div class="mt-2 underline">
+      <a href="/projects/arduino-lmic-lorawan">Project Page</a>
     </div>
   </Project>
 </div>
